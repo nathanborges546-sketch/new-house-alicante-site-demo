@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* New House Alicante - Design System
+   Brand Colors: Coral Orange (#F05A3E) + Dark Gray/Anthracite
+   All colors in HSL format
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Coral Orange - Brand Primary */
+    --primary: 9 87% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Dark Gray/Anthracite */
+    --secondary: 220 10% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Lighter coral for accents */
+    --accent: 9 87% 95%;
+    --accent-foreground: 9 87% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 9 87% 59%;
+
+    --radius: 0.75rem;
+
+    /* Custom brand tokens */
+    --coral: 9 87% 59%;
+    --coral-light: 9 87% 65%;
+    --coral-dark: 9 87% 50%;
+    --anthracite: 220 10% 25%;
+    --anthracite-light: 220 10% 35%;
+    --warm-white: 30 20% 98%;
+    --warm-gray: 30 5% 96%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 10% 25%;
+    --sidebar-primary: 9 87% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 9 87% 95%;
+    --sidebar-accent-foreground: 9 87% 45%;
+    --sidebar-border: 220 13% 90%;
+    --sidebar-ring: 9 87% 59%;
+  }
+
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 9 87% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 10% 75%;
+    --secondary-foreground: 220 15% 10%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 9 60% 20%;
+    --accent-foreground: 9 87% 70%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 9 87% 59%;
+
+    --sidebar-background: 220 15% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 9 87% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 9 60% 20%;
+    --sidebar-accent-foreground: 9 87% 70%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 9 87% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2 {
+    @apply font-semibold tracking-tight text-foreground uppercase;
+  }
+
+  h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-coral {
+    background: linear-gradient(135deg, hsl(var(--coral)) 0%, hsl(var(--coral-dark)) 100%);
+  }
+
+  .gradient-anthracite {
+    background: linear-gradient(135deg, hsl(var(--anthracite)) 0%, hsl(var(--anthracite-light)) 100%);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
